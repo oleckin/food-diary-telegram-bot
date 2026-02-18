@@ -9,8 +9,6 @@ const envSchema = z.object({
   SUPABASE_URL: z.string().url('SUPABASE_URL must be a valid URL'),
   SUPABASE_SERVICE_ROLE_KEY: z.string().min(1, 'SUPABASE_SERVICE_ROLE_KEY is required'),
   SUPABASE_STORAGE_BUCKET: z.string().default('food'),
-  USER_TELEGRAM_ID_COLUMN: z.string().default('telegram_id'),
-  USER_ON_CONFLICT_COLUMN: z.string().default('telegram_id'),
   OPENAI_API_KEY: z.string().optional(),
   STT_PROVIDER: z.enum(['openai', 'none']).default('none')
 });
